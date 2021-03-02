@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efc4b792-1743-4aa4-8fa1-d1749ab6b65e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[131ead47]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pA6X1YKw8PRX4YqkeMg5odl3JX" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Github Demo Projects\ecommerce\lib\ui\productList" />
+      <recent name="D:\Github Demo Projects\ecommerce\lib\ui\cart" />
+      <recent name="D:\Github Demo Projects\ecommerce\lib" />
+      <recent name="D:\Github Demo Projects\ecommerce\assets\icon" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efc4b792-1743-4aa4-8fa1-d1749ab6b65e" name="Default Changelist" comment="" />
+      <created>1614613583731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614613583731</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614618667064">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1614618667064" />
+    <state x="100" y="100" width="1720" height="880" key="AVDManager" timestamp="1614691847163">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1614691847163" />
+    <state x="779" y="286" key="AndroidProcessChooserDialog" timestamp="1614616570561">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="779" y="286" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1614616570561" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1614692883190">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1614692883190" />
+    <state width="1860" height="312" key="GridCell.Tab.0.bottom" timestamp="1614693482581">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482581" />
+    <state width="1860" height="312" key="GridCell.Tab.0.center" timestamp="1614693482565">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="312" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482565" />
+    <state width="1860" height="312" key="GridCell.Tab.0.left" timestamp="1614693482565">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="312" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482565" />
+    <state width="1860" height="312" key="GridCell.Tab.0.right" timestamp="1614693482581">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1860" height="312" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482581" />
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614692493140">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1614692493140" />
+    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1614693266242">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1614693266242" />
+    <state x="623" y="239" key="search.everywhere.popup" timestamp="1614691209597">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="239" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1614691209597" />
+  </component>
+</project>
