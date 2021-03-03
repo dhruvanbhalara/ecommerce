@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:ecommerce/helper/style/appColors.dart';
 import 'package:ecommerce/network/model/productListResponse.dart';
 import 'package:ecommerce/ui/cart/cart.dart';
 import 'package:flutter/material.dart';
@@ -13,46 +14,67 @@ class ProductList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cartBloc = BlocProvider.of<CartBloc>(context);
     return Scaffold(
       appBar: _MyAppBar(),
-      body: BlocBuilder<ProductListBloc, ProductListState>(
-        builder: (context, state) {
-          if (state is ProductListLoading) {
-            return Center(
-              child: CircularProgressIndicator(),
+      body: BlocListener<CartBloc, CartState>(
+        listener: (context, state) {
+          if (state is CartAddSuccess) {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(
+                backgroundColor: AppColor.lightBlue,
+                content: Text('Product Added to Cart'),
+              ),
             );
           }
-          if (state is ProductListLoaded) {
-            return StaggeredGridView.count(
-              shrinkWrap: true,
-              crossAxisCount: 4,
-              physics: BouncingScrollPhysics(),
-              padding: const EdgeInsets.all(8.0),
-              controller: _scrollController
-                ..addListener(() {
-                  if (_scrollController.offset == _scrollController.position.maxScrollExtent &&
-                      !context.read<ProductListBloc>().isFetching &&
-                      context.read<ProductListBloc>().response.totalRecord <
-                          state.productList.length) {
-                    context.read<ProductListBloc>()
-                      ..isFetching = true
-                      ..add(ProductListStarted());
-                  }
-                }),
-              children: state.productList.map((item) {
-                return _MyListItem(item);
-              }).toList(),
-              staggeredTiles:
-                  state.productList.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
-              mainAxisSpacing: 8.0,
-              crossAxisSpacing: 8.0,
+          if (state is CartRemoveSuccess) {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(
+                backgroundColor: AppColor.lightBlue,
+                content: Text('Product Removed from Cart'),
+              ),
             );
           }
-          if (state is ProductListError) {
-            return Center(child: const Text('Something went wrong!'));
-          }
-          return Container();
         },
+        child: BlocBuilder<ProductListBloc, ProductListState>(
+          builder: (context, state) {
+            if (state is ProductListLoading) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (state is ProductListLoaded) {
+              return StaggeredGridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 4,
+                physics: BouncingScrollPhysics(),
+                padding: const EdgeInsets.all(8.0),
+                controller: _scrollController
+                  ..addListener(() {
+                    if (_scrollController.offset == _scrollController.position.maxScrollExtent &&
+                        !context.read<ProductListBloc>().isFetching &&
+                        context.read<ProductListBloc>().response.totalRecord <
+                            state.productList.length) {
+                      context.read<ProductListBloc>()
+                        ..isFetching = true
+                        ..add(ProductListStarted());
+                    }
+                  }),
+                children: state.productList.map((item) {
+                  return _MyListItem(item);
+                }).toList(),
+                staggeredTiles:
+                    state.productList.map<StaggeredTile>((_) => StaggeredTile.fit(2)).toList(),
+                mainAxisSpacing: 8.0,
+                crossAxisSpacing: 8.0,
+              );
+            }
+            if (state is ProductListError) {
+              return Center(child: const Text('Something went wrong!'));
+            }
+            return Container();
+          },
+        ),
       ),
     );
   }
@@ -88,7 +110,10 @@ class _AddButton extends StatelessWidget {
                   ),
           );
         }
-        return Center(child: const Text('Something went wrong!'));
+        if (state is CartError) {
+          return Center(child: const Text('Something went wrong!'));
+        }
+        return Container();
       },
     );
   }

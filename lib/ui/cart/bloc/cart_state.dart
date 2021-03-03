@@ -23,3 +23,21 @@ class CartError extends CartState {
   @override
   List<Object> get props => [];
 }
+
+class CartAddSuccess extends CartState {
+  const CartAddSuccess({this.cart = const Cart()});
+
+  final Cart cart;
+
+  @override
+  List<Object> get props => [cart];
+}
+
+class CartRemoveSuccess extends CartState {
+  const CartRemoveSuccess({this.cart = const Cart()});
+
+  final Cart cart;
+
+  @override
+  List<Object> get props => [cart];
+}

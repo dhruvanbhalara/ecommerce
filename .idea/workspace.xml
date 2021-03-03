@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efc4b792-1743-4aa4-8fa1-d1749ab6b65e" name="Default Changelist" comment="" />
+    <list default="true" id="efc4b792-1743-4aa4-8fa1-d1749ab6b65e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/network/model/productListResponse.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/network/model/productListResponse.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/cart/bloc/cart_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/cart/bloc/cart_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/cart/bloc/cart_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/cart/bloc/cart_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/cart/my_cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/cart/my_cart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/productList/productsList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/productList/productsList.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +22,9 @@
         <option value="Dart File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pA6X1YKw8PRX4YqkeMg5odl3JX" />
   <component name="ProjectViewState">
@@ -66,30 +77,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1614692883190" />
-    <state width="1860" height="312" key="GridCell.Tab.0.bottom" timestamp="1614693482581">
+    <state width="1860" height="339" key="GridCell.Tab.0.bottom" timestamp="1614779446997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482581" />
-    <state width="1860" height="312" key="GridCell.Tab.0.center" timestamp="1614693482565">
+    <state width="1860" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1614779446997" />
+    <state width="1860" height="339" key="GridCell.Tab.0.center" timestamp="1614779446997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="312" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482565" />
-    <state width="1860" height="312" key="GridCell.Tab.0.left" timestamp="1614693482565">
+    <state width="1860" height="339" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1614779446997" />
+    <state width="1860" height="339" key="GridCell.Tab.0.left" timestamp="1614779446997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="312" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482565" />
-    <state width="1860" height="312" key="GridCell.Tab.0.right" timestamp="1614693482581">
+    <state width="1860" height="339" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1614779446997" />
+    <state width="1860" height="339" key="GridCell.Tab.0.right" timestamp="1614779446997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1860" height="312" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1614693482581" />
+    <state width="1860" height="339" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1614779446997" />
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1614692493140">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1614692493140" />
-    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1614693266242">
+    <state x="667" y="273" width="585" height="592" key="find.popup" timestamp="1614779455968">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1614693266242" />
+    <state x="667" y="273" width="585" height="592" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1614779455968" />
     <state x="623" y="239" key="search.everywhere.popup" timestamp="1614691209597">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

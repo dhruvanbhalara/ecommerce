@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:ecommerce/db/database.dart';
 import 'package:ecommerce/network/model/productListResponse.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
@@ -29,8 +30,8 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   Stream<CartState> _mapCartStartedToState() async* {
     yield CartLoading();
     try {
-      await Future<void>.delayed(const Duration(seconds: 1));
-      yield const CartLoaded();
+      var productList = await DBProvider.db.getAllProduct();
+      yield CartLoaded(cart: Cart(items: productList));
     } catch (_) {
       yield CartError();
     }
@@ -42,9 +43,18 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   ) async* {
     if (state is CartLoaded) {
       try {
-        yield CartLoaded(
-          cart: Cart(items: List.from(state.cart.items)..add(event.item)),
-        );
+        var count = await DBProvider.db.geProduct(event.item.id) ?? 0;
+        print("count $count");
+        if (count > 0) {
+          count++;
+          DBProvider.db.updateProductQuantity(event.item, count);
+        } else {
+          /// add product to db
+          DBProvider.db.addProduct(event.item);
+        }
+        var productList = await DBProvider.db.getAllProduct();
+        yield CartAddSuccess(cart: Cart(items: productList));
+        yield CartLoaded(cart: Cart(items: productList));
       } on Exception {
         yield CartError();
       }
@@ -57,9 +67,13 @@ class CartBloc extends Bloc<CartEvent, CartState> {
   ) async* {
     if (state is CartLoaded) {
       try {
-        yield CartLoaded(
-          cart: Cart(items: List.from(state.cart.items)..remove(event.item)),
-        );
+        /// add product to db
+        DBProvider.db.deleteProduct(event.item);
+
+        var productList = await DBProvider.db.getAllProduct();
+
+        yield CartRemoveSuccess(cart: Cart(items: productList));
+        yield CartLoaded(cart: Cart(items: productList));
       } on Exception {
         yield CartError();
       }

@@ -33,8 +33,6 @@ class MyCart extends StatelessWidget {
 class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final itemNameStyle = Theme.of(context).textTheme.headline6;
-
     return BlocBuilder<CartBloc, CartState>(
       builder: (context, state) {
         if (state is CartLoading) {
@@ -96,6 +94,7 @@ class _CartItem extends StatelessWidget {
                       Flexible(
                         child: Text(
                           '${item.title}',
+                          maxLines: 1,
                           style: TextStyle(
                             color: Colors.grey[700],
                             fontWeight: FontWeight.w500,
@@ -128,12 +127,39 @@ class _CartItem extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10.0),
+                      Flexible(child: BlocBuilder<CartBloc, CartState>(builder: (context, state) {
+                        if (state is CartLoaded) {
+                          return Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Quantity',
+                                style: TextStyle(
+                                  color: Colors.grey[700],
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14.sp,
+                                ),
+                              ),
+                              Text(
+                                '${item.quantity ?? 1}',
+                                style: TextStyle(
+                                  color: Colors.grey[700],
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14.sp,
+                                ),
+                              )
+                            ],
+                          );
+                        }
+                        return Container();
+                      })),
+                      const SizedBox(height: 10.0),
                       Flexible(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Quantity',
+                              'Delete',
                               style: TextStyle(
                                 color: Colors.grey[700],
                                 fontWeight: FontWeight.w500,
@@ -142,13 +168,9 @@ class _CartItem extends StatelessWidget {
                             ),
                             BlocBuilder<CartBloc, CartState>(builder: (context, state) {
                               if (state is CartLoaded) {
-                                return Text(
-                                  '${state.cart.items.where((element) => element == item).length}',
-                                  style: TextStyle(
-                                    color: Colors.grey[700],
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 14.sp,
-                                  ),
+                                return GestureDetector(
+                                  onTap: () => context.read<CartBloc>().add(CartItemRemove(item)),
+                                  child: Icon(Icons.delete),
                                 );
                               }
                               return Container();

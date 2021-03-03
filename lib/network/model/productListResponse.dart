@@ -43,6 +43,7 @@ class Product {
     this.title,
     this.description,
     this.price,
+    this.quantity,
     this.featuredImage,
     this.status,
     this.createdAt,
@@ -53,6 +54,7 @@ class Product {
   String title;
   String description;
   int price;
+  int quantity;
   String featuredImage;
   String status;
   String createdAt;
@@ -63,9 +65,9 @@ class Product {
         title: json["title"] == null ? null : json["title"],
         description: json["description"] == null ? null : json["description"],
         price: json["price"] == null ? null : json["price"],
+        quantity: json["quantity"] == null ? null : json["quantity"],
         featuredImage: json["featured_image"] == null ? null : json["featured_image"],
         status: json["status"] == null ? null : json["status"],
-        createdAt: json["created_at"] == null ? null : json["created_at"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -74,8 +76,8 @@ class Product {
         "title": title == null ? null : title,
         "description": description == null ? null : description,
         "price": price == null ? null : price,
+        "quantity": quantity == null ? null : quantity,
         "featured_image": featuredImage == null ? null : featuredImage,
         "status": status == null ? null : status,
-        "created_at": createdAt == null ? null : createdAt,
       };
 }
